@@ -1,0 +1,829 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Entity</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" href="img/Logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color:#ffffff;
+}
+
+@font-face {
+    font-family:trip-sans-bold ;
+    src: url(fonts/trip-sans-bold.otf);
+}
+
+@font-face {
+    font-family:trip-sans-medium ;
+    src: url(fonts/trip-sans-medium.otf);
+}
+
+@font-face {
+    font-family:trip-sans-ultra ;
+    src: url(fonts/trip-sans-ultra.otf);
+}
+
+@font-face {
+    font-family:veneer ;
+    src: url(fonts/Veneer\ W01\ Two.ttf);
+}
+
+/* .header {
+    align-items: center;
+} */
+
+.header {
+    position:absolute;
+    height: 12%;
+    width: 100%;
+    background-color: #FED206;
+    padding: none;
+    margin: auto;
+    max-width: 100%;
+}
+
+.header #logo {
+    position: relative;
+    margin-top: 10px;
+    height:100px ;
+    left: 10%;
+}
+
+.header .dropdowns {
+    text-align: center;
+}
+
+.header .dropdowns ul {
+    display: relative;
+    margin-top:-60px;
+    list-style-type: none;
+}
+
+.header .dropdowns li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    display: inline-block;
+    padding-left: 10%;
+    display: inline;
+}
+/* 
+.dropdown-menu li{
+    display: block;
+}
+
+.dropdown-menu {
+    width: 100%;
+    background-color: #4A260E;
+    position: absolute;
+     z-index: 999; 
+    display: none;
+}
+
+.dropdowns li a:hover {
+    width: 20px;
+    color: azure;
+    text-decoration: none;
+    background: #7a6819;
+}
+
+.dropdown-menu li a:hover {
+    background: #4A260E;
+}
+
+.dropdowns ul li:hover ul .dropdown-menu {
+    display: block;
+
+} */
+
+/* .hero-brownie img{
+    display: absolute;
+    position: absolute;
+    width: 300px;
+    z-index: 4;
+}  */
+
+nav{
+    size: larger;
+    position: absolute;
+    top: 25%;
+    left:40%;
+    padding-left: 20px;
+}
+nav a {
+    float: left;
+    font-size: 20px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px 20px;
+    text-decoration: none;
+    font-family: "trip-sans-bold";
+  }
+
+  nav a:hover 
+  {
+    /* border-radius: 30px; */
+    transition: .5s linear;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+  }
+
+  .dropdown 
+  {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn 
+  {
+    font-size: 20px;  
+    border: none;
+    outline: none;
+    color: #000000;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: "trip-sans-bold" ;
+    margin: 0;
+  }
+
+  .dropdown .dropbtn:hover 
+  {
+    transition: .5s linear;
+    color: #FED206;
+    background-color: #4A260E;
+  }
+
+  .dropdown-content 
+  {
+    display: none;
+    position: absolute;
+    color: azure;
+    background-color: #4A260E;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a 
+  {
+    float: none;
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover 
+  {
+    transition: .5s linear;
+    color: #FED206;
+    background-color: #4A260E;
+  }
+
+  .dropdown:hover .dropdown-content 
+  {
+    display: block;
+  }
+
+.hero-container {
+    background-color: #4A260E;
+    height: 70%;
+    max-height: 70%;
+
+}
+
+
+.tilt-container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 21;
+  }
+
+  .tilt-content {
+    width: 100%;
+    height: 100%;
+    top: 210px;
+    left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+.hero-image img{
+    display: relative;
+    top: 140px;
+    left: 45%;
+    position: relative;
+    width: 700px;
+    size: 85%;
+} 
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: #4A260E;
+    height: 625px;
+
+}
+.hero-section .shop-now-btn
+{
+    cursor: pointer;
+    font-size: large;
+    top: 46%;
+    left: 46%;
+    color: azure;
+    /* display: absolute; */
+    position: absolute;
+    padding: 16 23 16 23;
+    border: none;
+    background-color: #019384;
+    /* border-radius: 30px; */
+    box-shadow: 10px;
+    z-index: 1;
+    box-shadow: 0 0 20px 10px #2f190b;
+
+} 
+
+.hero-section .shop-now-btn:hover {
+    transition: 0.5s;
+    color: rgb(122, 76, 38);
+    background-color: #FED206;
+}
+
+/* .wrapper {
+
+    position: relative;
+    top: 50%;
+   max-height: 130px;
+   border: none;
+   display: flex;
+   overflow-x: auto;
+    left: 50px; 
+
+
+} 
+
+.wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+.wrapper .item {
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: azure;
+    margin-right: 2px;
+    border-radius: 10px;
+
+} */
+
+
+.img-area {
+    cursor: pointer;
+    position: relative;
+    top: 100px;
+    left:45%;
+    height: 300px;
+    width: 400px;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0px 8px 32px 0px rgb(196, 196, 196) ;
+
+}
+
+.img-area img {
+    position: absolute;
+    left: 0;
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+    /* transition: opacity 1s ease-in-out;
+    z-index: 2; */
+
+}
+
+
+
+.img-area .img-front {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+
+.img-front:hover {
+    opacity: 1;
+}
+/* .img-area img .img-front:hover {
+    opacity: 0;
+    cursor: pointer;
+
+} */
+
+.section-3 {
+    display: inline-flex;
+    position: relative;
+    height: 500px;
+}
+
+.section-3 div{
+    background-color: none;
+    background: none;
+    padding:none;
+}
+
+.section-3 .Deal-section .deal-image img {
+    position: relative;
+    top: 80px;
+    left: 85%;
+    width: 600px;
+    
+}
+
+
+.Deal-section .Grab-btn
+{
+    cursor: pointer;
+    font-size: large;
+    top: -10%;
+    left: 100%;
+    color: azure;
+    /* display: absolute; */
+    position: relative;
+    padding: 16 23 16 23;
+    border: none;
+    background-color: #fd225c;
+    /* border-radius: 30px; */
+    box-shadow: 10px;
+    z-index: 1;
+    box-shadow: 0 0 20px 10px #d3ad05;
+
+} 
+
+.section-3 .Deal-section .Grab-btn:hover {
+    transition: 0.5s;
+    color: #FED206;
+    background-color:rgb(122, 76, 38) ;
+}
+
+.section-4 {
+    position:absolute;
+    top: 100%;
+}
+
+.section-4-heading {
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 300px;
+    font-family: veneer;
+    font-size: larger;
+}
+
+ .div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 350px; */
+    background-color: #000000;
+} 
+
+/* .container div{
+    background-color: #2f190b;
+    height: 400px;
+    width: 300px;
+    margin: 60px;
+} */
+
+/* .container 
+{
+    align-items: center;
+} */
+
+/* 
+.container .quick-add-btn button {
+
+    width: 100px;
+    height: 35px;
+
+}  */
+
+#background{
+    position: absolute;
+    top: 28%;
+    height: 1400px;
+    width: 100%;
+    /* z-index: 99; */
+    /* background-color: white; */
+}
+
+/* 
+.outer {
+    top: 60%;
+    left: 30%;
+    position: relative;
+    overflow: scroll;
+    width: 50%;
+    padding: 0 0 40px 0;
+}
+
+.outer .inner {
+    width: 1300px;
+}
+
+.outer .inner div.item {
+    background-color: #019384;
+    width: 250px;
+    height: 300px;
+    float: left;
+    margin: 0 4px 0 0px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+
+.item #item1:hover{
+    color: aqua;
+    
+} */
+
+footer {
+    position: relative;
+    text-align: center;
+    /* height: 100%; */
+} 
+
+    </style> -->
+
+   <script src="script.js"></script> 
+
+    <!-- <script>
+        // JavaScript to apply tilt effect on hover
+        document.querySelector('.tilt-container').addEventListener('mousemove', function(e) {
+          const rect = this.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const tiltX = (y / rect.height - 1) * 20; // Adjust the tilt range
+          const tiltY = (x / rect.width - 1) * 20; // Adjust the tilt range
+          this.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        });
+    
+        // Reset the tilt on mouse leave
+        document.querySelector('.tilt-container').addEventListener('mouseleave', function() {
+          this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        });
+      </script> -->
+
+
+</head>
+<body>
+    <!-- <div class="hero-brownie">
+        <img src="hero-img.png" alt="hero-3d-render">
+    </div> -->
+
+    <div class="header">
+
+            <div class="icons-header">
+
+                <div class="search">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #4A260E;" ></i></a>
+                </div>
+
+                <div class="profile">
+                    <a href="#"><i class="fa-solid fa-user" style="color: #4A260E;"></i></a>
+                </div>
+
+                <div class="home">
+                    <a href="#"><i class="fa-solid fa-house fa-beat" style="color: #4A260E;"></i></a>
+                </div>
+
+            </div>
+
+            <img id="logo" src="img/Logo.png" alt="logo">
+
+            <nav>
+                <a href="#home">Buy Snacks</a>
+                <a href="#services">Store locations</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Starter packs 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#product1">Product 1</a>
+                    <a href="#product2">Product 2</a>
+                    <a href="#product3">Product 3</a>
+                  </div>
+                </div>
+                <!-- <a href="#about">About</a>
+                <a href="#contact">Contact</a> -->
+            </nav>
+
+        <!-- <div class="dropdowns">
+            <ul>
+                <li id="buy-snacks"><a href="">Buy Snacks entity</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">#</a></li>
+                        <li><a href="">#</a></li>
+                        <li><a href="">#</a></li>
+                    </ul>
+                </li>
+
+                <li id="store-location"><a href="">Store Location</a></li>
+                <li id="starter-packs"><a href="">Starter Packs</a></li>
+            </ul>
+        </div> -->
+    </div>
+
+    <div class="tilt-container">
+        <div class="tilt-content">
+          Product Image
+        </div>
+      </div>
+
+<div class="hero-section">
+
+    <div class="hero-container">
+        <div class="hero-image">
+            <img src="img/Hero-text.png" alt="Satisfy your sweet craving copy">
+        </div>
+    </div>
+
+    <div class="Hero-btn">
+        <button class="shop-now-btn" onclick="myFunction()">Shop now</button>
+        </div>
+
+</div>
+
+<div class="section-3">
+<!-- <div class="wrapper"> -->
+
+    <div class="img-area">
+        <img src="img/brownies3.jpg" alt="front-img" class="img-back">
+        <img src="img/brownies2.jpg" alt="back-img" class="img-front">
+    </div>
+
+    <div class="Deal-section">
+
+        <div class="deal-image">
+            <img src="img/Brownie bonanza.png" alt="Brownie-deal">
+        </div>
+
+        <button class="Grab-btn" onclick="myFunction()">Grab Yours</button>
+    </div>
+<!-- </div> -->
+</div>
+
+<div class="section-4">
+
+    <div class="section-4-heading">
+        <h1>NEW SNACK ENTITY BROWNIE</h1>
+    </div>
+
+    <!-- <div class="div-container">
+            <div class="container">
+                <div class="quick-add-btn">
+                    <button class="quick-add" type="button"></button>
+                </div>
+            </div>
+    </div> -->  
+    <div class="background-4">
+        <img src="img/section-4.png" alt="section-4-background">
+    </div>
+
+</div>
+
+<!-- <div class="div-container">
+    <div class="container">
+        <div class="quick-add-btn">
+            <button class="quick-add" type="button"></button>
+        </div>
+    </div>
+</div> -->
+
+<div class="outer">
+    <div class="inner">
+
+        <div class="item" id="item1">
+            <div class="quick-add-btn">
+                <button class="quick-add" type="button" onclick="myFunction()">Quick Add</button>
+            </div>
+        </div>
+
+        <div class="item" id="item2">
+            <div class="quick-add-btn">
+                <button class="quick-add" type="button" onclick="myFunction()">Quick Add</button>
+            </div>
+        </div>
+
+        <div class="item" id="item3">
+            <div class="quick-add-btn">
+                <button class="quick-add" type="button" onclick="myFunction()">Quick Add</button>
+            </div>
+        </div>
+
+        <div class="item" id="item4">
+            <div class="quick-add-btn">
+                <button class="quick-add" type="button" onclick="myFunction()">Quick Add</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+ <div class="section-5">
+
+    <div class="section-5-heading">Grab it, Snack it</div>
+
+    <div class="div-containers-2">
+        
+        
+        <div id="box-item">
+            <h1 style="left: 10%;">Starter pack, Yes Please</h1>
+            <!-- Starter pack, Yes Please -->
+        </div>
+        <div id="box-item">
+            <h1> We Ship it</h1>
+            <!-- We Ship it -->
+        </div>
+        <div id="box-item">
+            <h1>Try it, Taste it</h1>
+            <!-- Try it, Taste it -->
+        </div>
+
+    </div>
+
+</div>
+
+<div class="sample-img-section">
+    <div class="why-choose-us">Why choose US</div>
+
+    <div class="section-6">
+     <img src="character/section-6.png" alt="section 6 artwork">
+    </div>
+
+</div>
+
+<div class="section-7">
+
+    <img class="text-img" src="character/section 7 text.png" alt="section 7 left text">
+
+    <div class="Brownie-img">
+        <img src="character/browines-hero.png" alt="Brownie-img">
+    </div>
+
+    <div  class="try" >
+        <button onclick="myFunction()">Try a square</button>
+    </div>
+
+    <div class="Add-info">
+        <div class="Info" id="Protein-info">
+            <h1>Protein 6g</h1>
+            <p>For a sourse of energy</p>
+        </div>
+
+        <div class="Info" id="sugar-info">
+            <h1>Lower in sugar</h1>
+            <p>15% less cormpared to</p>
+            <p>conventional confectionary</p>
+        </div>
+
+        <div  class="Info" id="choc-info">
+            <h1>real chocolate</h1>
+            <p>Because it makes it</p>
+            <p>taste so good</p>
+        </div>
+
+        <div  class="Info" id="fiber">
+            <h1>Fiber 4g</h1>
+            <p>To support your gut</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="section-8">
+    <div>
+        <img src="img/section-8.png" alt="section-7-background">
+    </div>
+    <div id="irregular1">
+        <img src="img/irregular1.png" alt="">
+    </div>
+</div>
+
+<div class="section-9">
+
+<div class="customer-container">
+
+    <div class="section-9-heading1">
+        <h1>Happy Customers</h1>
+    </div>
+
+    <div class="Customer-section">
+        <div class="Customer1" id="cus-dox">
+            <img src="img/right.png" alt="Customer1">
+        </div>
+
+        <div class="Customer2" id="cus-dox">
+            <img src="img/left.png" alt="Customer2">
+        </div>
+
+        <div class="Customer3" id="cus-dox">
+            <img src="img/middle.png" alt="Customer3">
+        </div>
+    </div>
+
+</div>
+
+<div class="irl-container">
+
+    <div class="section-9-heading2">
+        <h1>Getting Snacked IRL</h1>
+    </div>
+
+    <div class="div-containers-3">
+        <div class="irlbox" id="irl-box1"></div>
+        <div class="irlbox" id="irl-box2"></div>
+        <div class="irlbox" id="irl-box3"></div>
+    </div>
+
+    <div class="background-8">
+        <img src="img/background-8.png" alt="background-8">
+    </div>
+</div>
+
+</div>
+
+<div class="section-10">
+    <img src="img/irregular2.png" alt="section-10">
+</div>
+
+<footer>
+
+    <div class="footer-logo">
+        <img src="img/Logo.png" alt="logo">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Brownie</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+                <h4>About us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                    <li><a href="#">content Creators</a></li>
+                <ul>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="copy-rights">
+        <a href="#">@2023,Snack Entity</a>
+    </div>
+    
+</footer>
+</body>
+</html>
